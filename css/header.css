@@ -1,0 +1,490 @@
+/* header */
+.top-bar {
+    background-color: #f24b30;
+    padding: 10px 0;
+    color: #fff;
+  }
+  .top-bar p,
+  .top-bar strong {
+    font-size: 16px;
+  }
+  .top-bar .sale-heading {
+    font-size: 18px;
+  }
+  .sale-heading + p {
+    border: 1px solid #fff;
+    border-top: 0;
+    border-bottom: 0;
+  }
+  .top-bar button {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 16px;
+  }
+  .main-up-head p,
+  .main-up-head strong,
+  .call a {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .main-up-head:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 46.25px;
+    height: 1px;
+    background: #dadfe0;
+  }
+  .dealers-dropdown {
+    display: none;
+  }
+  
+  .active.dealers-dropdown {
+    display: block;
+  }
+  .border-p {
+    border: 1px solid #dadfe0;
+    border-top: 0;
+    border-bottom: 0;
+  }
+  .call span {
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .up-1 .line-border {
+    border-right: 1px solid #dadfe0;
+  }
+  .dealers-dropdown {
+    border: 1px solid #dadfe0;
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    background-color: #fff;
+    right: 30px;
+    z-index: 11;
+    border-top: 0;
+    min-height: 100px;
+  }
+  .main-down-head ul.call2 {
+    gap: 40px;
+    padding-top: 30px;
+  }
+  .main-down-head .logo-h {
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    max-width: 68px;
+  }
+  .search-input input[type="search"] {
+    border: 0;
+    outline: 0;
+    font-family: "Heebo", sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: #9aa2a5;
+    border-bottom: 1px solid #9aa2a5;
+    padding: 5px 25px 5px 0;
+    width: 275px;
+  }
+  .search-input button {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    color: #9aa2a5;
+  }
+  .search-h.d-flex {
+    gap: 25px;
+  }
+  .cart-h {
+    background-color: #f5f5f5;
+    padding: 12px 14px;
+  }
+  .cart-h span.cart-count {
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    line-height: 1;
+    padding: 6px 14px;
+  }
+  /* end-header */
+.header .btn-nav {
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    right: 15px;
+    bottom: 30px;
+    padding: 0;
+    background-color: transparent;
+    border-style: none;
+    outline: 0;
+    cursor: pointer;
+    z-index: 999;
+  }
+  .header .btn-nav span {
+    width: 100%;
+    height: 5px;
+    background-color: #f24b30;
+    display: block;
+    position: absolute;
+    border-radius: 2px;
+    transition: 0.5s;
+  }
+  .header .btn-nav span:first-child {
+    width: 8px;
+    height: 8px;
+    right: 0;
+    top: -10px;
+    border-radius: 10px;
+    z-index: 1;
+    animation: 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4) span1_close;
+  }
+  .header .btn-nav span:nth-child(2) {
+    width: calc(100% - 10px);
+    left: 0;
+    top: 0;
+    animation: 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4) forwards span2_close;
+  }
+  .header .btn-nav span:nth-child(3) {
+    right: 0;
+    top: 10px;
+    animation: 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4) forwards span3_close;
+  }
+  .header .btn-nav span:nth-child(4) {
+    right: 0;
+    top: 20px;
+    animation: 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4) forwards span4_close;
+  }
+  .header .btn-nav:hover span:first-child {
+    transform: translateY(-7px) scale(1.5);
+    background-color: #f24b30;
+  }
+  .header .btn-nav.open span:nth-child(2) {
+    animation: 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.8) forwards span2;
+    animation-delay: 0.1s;
+  }
+  .header .btn-nav:focus {
+    box-shadow: none;
+  }
+  @keyframes span2 {
+    10% {
+      transform: translateX(0) rotate(0);
+      width: 100%;
+    }
+    35% {
+      transform: translate(-15px, 15px) rotate(90deg);
+      width: 94%;
+    }
+    50%,
+    65% {
+      transform: translate(0, 15px) rotate(90deg);
+    }
+    55% {
+      transform: translate(5px, 15px) rotate(100deg);
+    }
+    60% {
+      transform: translate(-2px, 15px) rotate(85deg);
+    }
+    100% {
+      transform: translate(0, 15px) rotate(45deg);
+      width: 100%;
+      background-color: #f24b30;
+    }
+  }
+  .header .btn-nav.open span:nth-child(3) {
+    animation: 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4) forwards span3;
+    animation-delay: 0.2s;
+  }
+  @keyframes span3 {
+    10% {
+      transform: translateX(0) rotate(0);
+    }
+    35% {
+      transform: translate(28px, 4px) rotate(-90deg);
+      width: 94%;
+    }
+    50%,
+    65% {
+      transform: translate(0, 4px) rotate(-90deg);
+    }
+    55% {
+      transform: translate(5px, 4px) rotate(-80deg);
+    }
+    60% {
+      transform: translate(2px, 4px) rotate(-100deg);
+    }
+    100% {
+      transform: translate(0, 4px) rotate(-45deg);
+      width: 100%;
+      background-color: #f24b30;
+    }
+  }
+  .header .btn-nav.open span:nth-child(4) {
+    animation: 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4) forwards span4;
+    animation-delay: 0.3s;
+  }
+  @keyframes span4 {
+    10% {
+      transform: scale(1);
+    }
+    100% {
+      transform: translateY(-45px);
+      height: 133%;
+      width: 100%;
+      background-color: transparent;
+    }
+  }
+  @keyframes span1_close {
+    0% {
+      transform: translate(-63px, 7px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes span2_close {
+    0% {
+      transform: translate(0, 23px) rotate(45deg);
+      width: 100%;
+    }
+    100% {
+      transform: translate(0, 0) rotate(0);
+    }
+  }
+  @keyframes span3_close {
+    0% {
+      transform: translate(0, 4px) rotate(-45deg);
+    }
+    100% {
+      transform: translateX(0) rotate(0);
+    }
+  }
+  @keyframes span4_close {
+    0% {
+      transform: translateY(-45px);
+      height: 133%;
+      width: 100%;
+      background-color: transparent;
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+
+
+
+  .megamenu .custom-bg {
+    background-color: #f5f5f5;
+  }
+  .megamenu .mega-list li {
+    margin-bottom: 12px;
+  }
+  .megamenu .mega-list li a {
+    text-transform: capitalize;
+    font-weight: 400 !important;
+  }
+  .megamenu .mega-list li a:hover {
+    color: #f24b30;
+  }
+  
+  .megamenu .mega-list li:nth-child(1) a {
+    font-weight: 700 !important;
+    text-transform: uppercase;
+  }
+  .megamenu .col-3:last-child .mega-list:last-child li a {
+    color: #f24b30;
+  }
+  .cart-products {
+    box-shadow: 0px -3px 10px 0px #e5e5e5;
+    width: 500px;
+    top: calc(100% + 16px);
+    right: 0;
+    z-index: 99;
+    background-color: #fff;
+    display: none;
+  }
+  .active.cart-products {
+    display: flex;
+  }
+  .cart-products img {
+    width: 103px;
+  }
+  .cart-added-product {
+    border: 1px solid #2a2f30;
+  }
+  .cart-products strong {
+    font-weight: 500 !important;
+  }
+  .cart-products strong span {
+    font-size: 18px;
+  }
+  #add:focus i,
+  #sub:focus i {
+    color: #f24b30;
+  }
+  .megamenu {
+    position: absolute;
+    top: 100%;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 4px solid #f24b30;
+    height: 353px;
+    display: none;
+  }
+  .active.megamenu {
+    display: block;
+  }
+  .main-down-head .call.call2 > li {
+    padding: 0 0 30px 0;
+    cursor: pointer;
+  }
+  .megamenu strong.heading {
+    font-size: 24px;
+    color: #333333;
+  }
+  .megamenu strong.heading + p {
+    font-size: 13px;
+  }
+  .btn-secondary2 {
+    background-color: #2a2f30 !important;
+    font-size: 18px !important;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  .mob-side-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #fff;
+    display: none;
+    z-index: 9;
+    padding-top: 15px;
+    border-top: 0;
+    padding-bottom: 100px;
+  }
+  .mob-side-menu .mega-list {
+    border-bottom: 1px solid #333333;
+margin-bottom: 15px;
+  }
+  .mob-side-menu strong.heading {
+    font-size: 20px;
+    color: #333333;
+  }
+  .mob-side-menu .mega-list li {
+    display: none;
+  }
+  .mob-side-menu .mega-list li:nth-child(1) {
+    display: flex;
+    align-items: center;
+  }
+  .mob-side-menu .mega-list li:nth-child(1) i {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .mob-side-menu .mega-list li:nth-child(1) a:hover + i {
+    color: #f24b30;
+  }
+  .mob-side-menu .active.mega-list li {
+    display: block;
+  }
+  .mob-side-menu .active.mega-list li i {
+    transform: rotate(180deg);
+  }
+  .mob-side-menu .active.mega-list li:nth-child(1) {
+    display: flex;
+  }
+  .mob-side-menu .col-12 .mega-list:last-child a {
+    color: #f24b30;
+  }
+  .btn-nav.open {
+    top: 20px !important;
+  }
+  .mob-side-menu .dealers-dropdown{
+    left: 0;
+    right: 0;
+    border-top: 1px solid #dadfe0;
+  }
+  .dealers-dropdown.cc-custom-top{
+    top: 96%;
+  }
+  @media (max-width: 575.98px) {
+    .search-h.d-flex {
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .cart-h span.cart-count {
+      padding: 6px 10px;
+    }
+    .cart-products {
+      width: 375px;
+      top: calc(100% + 10px);
+      right: -14px;
+    }
+    .main-down-head .logo-h {
+      max-width: 58px;
+    }
+  }
+  @media (max-width: 767.98px) {
+    .top-bar p,
+    .top-bar strong {
+      font-size: 13px;
+    }
+    .top-bar p:nth-child(2) {
+      width: 100%;
+      order: 3;
+      text-align: center;
+      border: 0;
+    }
+    .main-up-head::after {
+      bottom: 44.44px;
+      top: initial;
+    }
+    .header .btn-nav {
+      top: 30px;
+      bottom: initial;
+    }
+    .search-input input[type="search"] {
+      width: 220px;
+    }
+    .cart-h {
+      padding: 8px;
+    }
+  }
+  @media (min-width: 767.98px) and (max-width: 991.98px) {
+    .who-we-are::after {
+      bottom: 0;
+    }
+    .main-down-head .logo-h.active {
+      bottom: 35px !important;
+    }
+    .mob-side-menu {
+      padding-top: 90px ;
+    }
+  }
+  @media (max-width: 991.98px) {
+    .main-up-head p,
+    .main-up-head strong,
+    .call a {
+      font-weight: 700;
+      font-size: 12px;
+    }
+    .main-down-head .logo-h {
+      position: relative;
+      left: initial;
+      transform: none;
+      z-index: 999;
+    }
+  }  
